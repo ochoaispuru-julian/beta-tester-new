@@ -17,7 +17,7 @@
   { 
     id: 2, 
     nombre: "Shinoda", 
-    desc: "Shinoda es alguien conocida por todo el curso. aunque mas por el nombre familiar, ella es alguien amigable y encantadora que parece no tener ningun defecto pero sus amigos saben todos los defectos de la impecable shinoda", 
+    desc: "Shinoda es alguien conocida por todo el curso. aunque es mas conocida por su familia, ella es alguien amigable y encantadora que parece no tener ningun defecto pero sus mejores amigos saben todos los defectos de la impecable shinoda y diran cosas como, que es torpe , que alguna veces es una otaku, que en algunos momentos piensa solo en ella y muchas mas", 
     color: "from-yellow-600/40",
     imagen: "/img/shinoda.png",
     habilidades: [
@@ -45,7 +45,7 @@
   { 
     id: 4, 
     nombre: "Watanabe", 
-    desc: "El Alquimista Jefe de los Caballeros...", 
+    desc: "Watanabe es.. bueno.. es Watanabe. es un chico que es bastante social y esta en varios grupos, es alguien divertido y algo carismatico. siempre hace cualquier tipo de bromas para mejorar el ambiente pero tambien es alguien un poco estupido.", 
     color: "from-teal-500/40",
     imagen: "/img/watanabe.png",
     habilidades: [
@@ -77,7 +77,7 @@ const CAPITULOS_HISTORIA = [
   {
     id: 2,
     titulo: "La Rebelión de la IA",
-    texto: "un dia un compañero les pidio ayuda con algo ya que necesitaba compañeros que trabajen en equipo. el grupo acepto por curiosidad. pero en realidad su compañero creo una simulacion.",
+    texto: "un dia un extraño compañero les pidio ayuda con un trabajo ya que necesitaba compañeros que trabajen en equipo. el grupo acepto por curiosidad. pero en realidad el trabajo de su compañero era algo que los cambiaria para siempre.",
     imagen: "/img/historia/rebelion.jpg",
     alin: "izquierda" // La imagen irá a la izquierda
   },
@@ -99,7 +99,7 @@ const CAPITULOS_HISTORIA = [
     id: 5,
     titulo: "El Vórtice Shinoda",
     texto: "tenian que vencer el juego y completar la simulacion. ahora el grupo se enfreta a los enemigos del juego, y tambien a 'Bugs' 'Errores en la Simulacion' y a todo lo que la simulacion les arroje",
-    imagen: "/img/historia/vortice.jpg",
+    imagen: "/img/game_picture/background.png",
     alin: "derecha"
   }
 ];export default function Home() {
@@ -143,7 +143,7 @@ const CAPITULOS_HISTORIA = [
       {/* FONDO DINÁMICO */}
       <div className="absolute inset-0 -z-10">
         <div className={`absolute inset-0 transition-opacity duration-1000 ${esInicio ? 'opacity-100' : 'opacity-0'}`}>
-          <Image src="/img/game_picture/background.png" alt="BG" className="object-cover md:object-center brightness-30" priority fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+          <Image src="/img/game_picture/background.png" alt="BG" className="object-cover blur-[1px] md:object-center brightness-30" priority fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         </div>
         <div className={`absolute inset-0 bg-gradient-to-b ${pjActual?.color || 'from-transparent'} to-[#0e0e0f] transition-all duration-700 ${esPersonajes ? 'opacity-100' : 'opacity-0'}`} />
         <div className={`absolute inset-0 bg-[#0e0e0f] transition-opacity duration-1000 ${esHistoria || esGaleria ? 'opacity-100' : 'opacity-0'}`} />
@@ -170,7 +170,22 @@ const CAPITULOS_HISTORIA = [
             {/*<h1 className="text-7xl md:text-9xl font-serif italic uppercase tracking-tighter mb-6">BetaTester</h1>*/}
             <Image src="/img/game_picture/logo2.png" alt="logo" className="object-cover" width={1000} height={900}/>
             <p className="text-blue-200 tracking-[0.5em] uppercase text-sm mb-10">El Juego esta en tu contra. Literalmente</p>
-            <button className="bg-blue-400 text-black px-10 py-4 shadow-lg shadow-blue-400 rounded-full font-bold hover:scale-105 transition-transform">DESCARGAR</button>
+            
+                        <a 
+              href="https://github.com/ochoaispuru-julian/beta-tester-new/tree/master" // Tu URL de destino
+              target="_blank"               // Abre en pestaña nueva
+              rel="noopener noreferrer"    // Seguridad: evita que la nueva página acceda a tu sitio
+              className="inline-block"      // Permite que el enlace se comporte como un contenedor de botón
+            >
+              <button className="bg-blue-400 text-black px-10 py-4 shadow-lg shadow-blue-400/50 rounded-full font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                <span>DESCARGAR</span>
+                {/* Icono opcional de flecha externa */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </button>
+            </a>
           </div>
         )}
 
@@ -224,11 +239,11 @@ const CAPITULOS_HISTORIA = [
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               
-              {/* Decoración de esquina tipo interfaz de juego */}
+              {/* Decoración de esquina tipo interfaz de juego 
               <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-white/20 rounded-tr-2xl pointer-events-none group-hover:border-blue-400 transition-colors" />
               <div className="absolute bottom-4 left-4 z-20 bg-black/70 px-4 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
                 <span className="text-[10px] text-zinc-400 uppercase tracking-widest font-bold">Registro Visual // A0{cap.id}</span>
-              </div>
+              </div>*/}
             </div>
           </div>
 
@@ -245,9 +260,9 @@ const CAPITULOS_HISTORIA = [
             <div className="col-span-12 md:col-span-6 flex flex-col justify-center h-[80vh]">
               {/* Títulos más compactos arriba para dar espacio */}
               <div className="mb-4">
-                <span className="text-white-500 font-bold tracking-[0.3em] uppercase text-xs">Personajes</span>
-                <h2 className="text-6xl md:text-7xl font-onest italic leading-none mt-2">{pjActual.nombre}</h2>
-                <p className="text-zinc-300 italic text-base md:text-lg max-w-md mt-2">"{pjActual.desc}"</p>
+                {/*<span className="text-white-500 font-bold tracking-[0.3em] uppercase text-xs">Personajes</span>*/}
+                <h2 className="text-6xl md:text-7xl font-black italic leading-none text-shadow-lg mt-2">{pjActual.nombre}</h2>
+                <p className="text-zinc-300 italic text-base md:text-lg max-w-md mt-2 ">"{pjActual.desc}"</p>
               </div>
               
               {/* LISTA DE HABILIDADES AMPLIADA */}
@@ -258,7 +273,7 @@ const CAPITULOS_HISTORIA = [
                   <div key={hab.id} className="flex items-center gap-6 bg-white/5 p-7 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/30 transition-all group cursor-default">
                     
                     {/* IMAGEN DE LA HABILIDAD: De w-12/h-12 a w-20/h-20 (o w-24/h-24 en desktop) */}
-                    <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0 bg-black/40 rounded-full overflow-hidden border-2 border-white/20 group-hover:scale-105 group-hover:border-amber-400/50 transition-all duration-300 shadow-lg">
+                    <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0 bg-black/40 rounded-full overflow-hidden border-2 border-white/20 group-hover:scale-105 group-hover:border-blue-400/50 transition-all duration-300 shadow-lg">
                       {/* Aquí reemplazas con tu imagen real de la habilidad */}
                       { <Image src={hab.img} alt={hab.nombre} fill priority className="object-cover" />}
                       <div className="w-full h-full flex items-center justify-center text-xs text-white/50">Img</div>
@@ -267,7 +282,7 @@ const CAPITULOS_HISTORIA = [
                     {/* TEXTO DE LA HABILIDAD: Fuentes más grandes y legibles */}
                     <div className="flex flex-col gap-1">
                       {/* Título más grande (text-base a text-lg) */}
-                      <h4 className="text-base md:text-lg font-bold text-amber-200 tracking-wide">{hab.nombre}</h4>
+                      <h4 className="text-base md:text-lg font-black text-blue-200 tracking-wide">{hab.nombre}</h4>
                       {/* Descripción más grande (text-xs a text-sm) y color un poco más claro */}
                       <p className="text-sm md:text-[13px] text-zinc-300 leading-relaxed pr-2">{hab.desc}</p>
                     </div>
@@ -329,7 +344,7 @@ const CAPITULOS_HISTORIA = [
 
           <div className="mt-8 text-center animate-in slide-in-from-bottom-5">
             <h3 className="text-2xl font-bold italic text-blue-200">{imagenSeleccionada.alt}</h3>
-            <p className="text-zinc-500 text-sm mt-2 uppercase tracking-widest">Click fuera para cerrar</p>
+            <p className="text-zinc-500 text-sm mt-2 uppercase tracking-widest">Click para cerrar</p>
           </div>
         </div>
       )}
@@ -345,11 +360,11 @@ const CAPITULOS_HISTORIA = [
         ))}
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
+      <div className="absolute bottom-10 left-325 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
         <div className="w-5 h-8 border-2 border-white rounded-full flex justify-center p-1">
           <div className="w-1 h-2 bg-white rounded-full animate-bounce" />
         </div>
-        <span className="text-[8px] uppercase tracking-widest">Scroll para navegar</span>
+        <span className="text-[10px] uppercase tracking-widest">Scroll para navegar</span>
       </div>
     </main>
   );
