@@ -2,23 +2,25 @@
   { 
     id: 1, 
     nombre: "Takara", 
-    desc: "Sus Mejores amigos la describen como alguien con una mascara. por fuera alguien charlatan y Glamorosa, por dentro es alguien ruda y bruta, pero no es alguien mala solo usa esa mascara por motivos personales", 
+    desc: "Sus mejores amigos la describen como alguien que lleva una máscara: por fuera se muestra charlatana y glamurosa, pero por dentro es ruda y bruta. No es una mala persona; simplemente usa esa apariencia por motivos personales.", 
     imagen: "/img/characters/takara/takara2.png",
-    color: "from-pink-600/40",
+    color: "from-[#db0992]/60",
+    colorTexto: "text-[#db0992]",
     habilidades: [
-      { id: 1, nombre: "Pasiva: Enojo", desc: "Mientras Menos Vidas tenga, mas aumenta su daño y resistencia al daño.", img: "/hab1.png" },
-      { id: 2, nombre: "Habilidad: Giro De Hacha ", desc: "Takara Gira con su hacha durante 3 Segundos y durante el giro se puede mover a cualquier direccion.", img: "/hab2.png" },
-      { id: 3, nombre: "Habilidad: Armadura de Hierro", desc: "al activarse Takara Recibe un aumento de 20% resistencia al daño y parte del daño que ella hace se convierte en regeneracion de vida.", img: "/hab3.png" },
-      { id: 4, nombre: "Habilidad: Lanzamiento de Hacha ", desc: "Takara lanza su hacha y vuelve. provocando daño a cualquier enemigo que golpe en el trayecto.", img: "/hab4.png" },
-      { id: 5, nombre: "Habilidad Definitiva: Valkyria (Superficie) ", desc: "Takara Golpea Con su Hacha el suelo y rompe la superficie aturdiendo cualquier enemigo que este en el area", img: "/hab5.png" },
-      { id: 6, nombre: "Habilidad Definitiva: Valkyria (Aerio)", desc: "Si Takara Activa Valkyria mientras esta en el aire se lanza al suelo agresivamente y alterando la superficie en la que cae provocando mucho daño a cualquier enemigo en el area", img: "/hab5.png" }
+      { id: 1, nombre: "Pasiva: Enojo", desc: "Mientras Menos Vidas tenga, mas aumenta su daño y resistencia al daño.", img: "/img/habilidades/takara/hab1.png" },
+      { id: 2, nombre: "Habilidad: Giro De Hacha ", desc: "Takara Gira con su hacha durante 3 Segundos y durante el giro se puede mover a cualquier direccion.", img: "/img/habilidades/takara/hab2.png" },
+      { id: 3, nombre: "Habilidad: Armadura de Hierro", desc: "al activarse Takara Recibe un aumento de 20% resistencia al daño y parte del daño que ella hace se convierte en regeneracion de vida.", img: "/img/habilidades/takara/hab3.png" },
+      { id: 4, nombre: "Habilidad: Lanzamiento de Hacha ", desc: "Takara lanza su hacha y vuelve. provocando daño a cualquier enemigo que golpe en el trayecto.", img: "/img/habilidades/takara/hab4.png" },
+      { id: 5, nombre: "Habilidad Definitiva: Valkyria (Superficie) ", desc: "Takara Golpea Con su Hacha el suelo y rompe la superficie aturdiendo cualquier enemigo que este en el area", img: "/img/habilidades/takara/hab5.png" },
+      { id: 6, nombre: "Habilidad Definitiva: Valkyria (Aerio)", desc: "Si Takara Activa Valkyria mientras esta en el aire se lanza al suelo agresivamente y alterando la superficie en la que cae provocando mucho daño a cualquier enemigo en el area", img: "/img/habilidades/takara/hab6.png" }
     ]
   },
   { 
     id: 2, 
     nombre: "Shinoda", 
-    desc: "Shinoda es alguien conocida por todo el curso. aunque es mas conocida por su familia, ella es alguien amigable y encantadora que parece no tener ningun defecto pero sus mejores amigos saben todos los defectos de la impecable shinoda y diran cosas como, que es torpe , que alguna veces es una otaku, que en algunos momentos piensa solo en ella y muchas mas", 
-    color: "from-yellow-600/40",
+    desc: "Shinoda es conocida por todo el curso, en parte por su familia. Es amigable, encantadora y parece perfecta, pero sus mejores amigos conocen su verdadera cara: saben que es torpe, un poco otaku y que, a veces, puede ser algo egoísta.", 
+    color: "from-[#e6da05]/60",
+    colorTexto: "text-[#e6da05]",
     imagen: "/img/shinoda.png",
     habilidades: [
       { id: 1, nombre: "Pasiva: Punto Debil", desc: "Los Enemigos Brillaran de color amarillo cuando su punto debil se revele. al atacar en ese momento el golpe obtendra mas daños", img: "/img/habilidades/shinoda/hab1.png"},
@@ -31,74 +33,76 @@
   { 
     id: 3, 
     nombre: "Touko", 
-    desc: "Touko es alguien tranquila.. Demasiado tranquila, mayormente pasa el tiempo sola y en su propio mundo y le gusta. aunque tampoco se queja cuando sale a divertirse con sus amigos.", 
-    color: "from-red-500/40",
+    desc: "Touko es una persona tranquila... demasiado tranquila. Pasa la mayor parte del tiempo sola, sumergida en su propio mundo. Sin embargo, tampoco se queja cuando sale afuera de su mundo para divertirse con sus amigos.", 
+    color: "from-[#d93d3d]/60",
+    colorTexto: "text-[#d93d3d]",
     imagen: "/img/touko.png",
     habilidades: [
-      { id: 1, nombre: "Pasiva: Truco del Sombrero", desc: "Cuando touko recibe un golpe fuerte pierde su sombrero. afectando negativamente sus estadisticas, si touko recupera su sombrero recupera sus estadisticas y ademas recibe un aumento breve de las mismas", img: "/hab1.png" },
-      { id: 2, nombre: "Habilidad: Esquiva", desc: "Una Esquiva a cualquier direccion. Puede seguir disparando mientras se realiza la Esquiva", img: "/hab2.png" },
-      { id: 3, nombre: "Habilidad: ¡Esto es Dinamita!", desc: "Touko Arroja un Paquete de Dinamita y este explota causando daño y empuje al enemigo.", img: "/hab3.png" },
-      { id: 4, nombre: "Habilidad: Rifle De Palanca", desc: "Touko Cambia su arma por un Rifle de Palanca que cuenta con 8 Disparos que tienen mucha precicion y mucho mas Daño que los revolver.", img: "/hab4.png" },
-      { id: 5, nombre: "Habilidad Definitiva: Manten la calma y ¡DISPARA!", desc: "Touko Canaliza y elimina todo ruido de lo que esta pasando y analizando a su alrededor. cuando touko escucha el ruido de disparar todo enemigo analizado recibira un disparo poderoso y Critico.", img: "/hab5.png" }
+      { id: 1, nombre: "Pasiva: Truco del Sombrero", desc: "Cuando touko recibe un golpe fuerte pierde su sombrero. afectando negativamente sus estadisticas, si touko recupera su sombrero recupera sus estadisticas y ademas recibe un aumento breve de las mismas", img: "/img/habilidades/touko/hab1.png" },
+      { id: 2, nombre: "Habilidad: Esquiva", desc: "Una Esquiva a cualquier direccion. Puede seguir disparando mientras se realiza la Esquiva", img: "/img/habilidades/touko/hab2.png" },
+      { id: 3, nombre: "Habilidad: ¡Esto es Dinamita!", desc: "Touko Arroja un Paquete de Dinamita y este explota causando daño y empuje al enemigo.", img: "/img/habilidades/touko/hab3.png" },
+      { id: 4, nombre: "Habilidad: Rifle De Palanca", desc: "Touko Cambia su arma por un Rifle de Palanca que cuenta con 8 Disparos que tienen mucha precicion y mucho mas Daño que los revolver.", img: "/img/habilidades/touko/hab4.png" },
+      { id: 5, nombre: "Habilidad Definitiva: Manten la calma y ¡DISPARA!", desc: "Touko Canaliza y elimina todo ruido de lo que esta pasando y analizando a su alrededor. cuando touko escucha el ruido de disparar todo enemigo analizado recibira un disparo poderoso y Critico.", img: "/img/habilidades/touko/hab5.png" }
     ]
   },
   { 
     id: 4, 
     nombre: "Watanabe", 
-    desc: "Watanabe es.. bueno.. es Watanabe. es un chico que es bastante social y esta en varios grupos, es alguien divertido y algo carismatico. siempre hace cualquier tipo de bromas para mejorar el ambiente pero tambien es alguien un poco estupido.", 
-    color: "from-teal-500/40",
+    desc: "Watanabe es... bueno, es Watanabe. Es un chico bastante social que se mueve en varios grupos; es divertido y tiene su carisma. Siempre busca mejorar el ambiente con sus bromas, pero tiene ese lado algo ingenuo que lo hace parecer un poco tonto a veces.", 
+    color: "from-[#2fa5e0]/60",
+    colorTexto: "text-[#2fa5e0]",
     imagen: "/img/watanabe.png",
     habilidades: [
-      { id: 1, nombre: "Pasiva: Combo", desc: "Mientras mas Golpes Aciertes. mas velocidad de ataque recibes pero en el caso de fallar un solo golpe, se pierde toda bonificacion y se reinicia la pasiva.", img: "/hab1.png" },
-      { id: 2, nombre: "Habilidad: Patada Voladora", desc: "Watanabe tira una patada voladora hacia adelante. puede golpear multiples objetivos", img: "/hab2.png" },
-      { id: 3, nombre: "Habilidad: El Gancho", desc: "Watanabe Tira un gancho que atrae al enemigo hacia el. cualquier enemigo que sea afectado por el gancho obtendra una reduccion de resistencia al daño.", img: "/hab3.png" },
-      { id: 4, nombre: "Habilidad: El Otro Gancho", desc: "Watanabe realiza un Gancho al menton que levanta al enemigo. esta habilidad puede golpear a multiples objetivos", img: "/hab4.png" },
-      { id: 5, nombre: "Habilidad Definitiva: Servidos En Bandeja", desc: "Watanabe tira su nunchakus que aumentan de tamaño y giran rapidamente atrayendo a cualquier enemigo hacia el centro de la habilidad. y todo daño hecho se traspasa a todo enemigo afectado por la habilidad", img: "/hab5.png" }
+      { id: 1, nombre: "Pasiva: Combo", desc: "Mientras mas Golpes Aciertes. mas velocidad de ataque recibes pero en el caso de fallar un solo golpe, se pierde toda bonificacion y se reinicia la pasiva.", img: "/img/habilidades/watanabe/hab1.png" },
+      { id: 2, nombre: "Habilidad: Patada Voladora", desc: "Watanabe tira una patada voladora hacia adelante. puede golpear multiples objetivos", img: "/img/habilidades/watanabe/hab2.png" },
+      { id: 3, nombre: "Habilidad: El Gancho", desc: "Watanabe Tira un gancho que atrae al enemigo hacia el. cualquier enemigo que sea afectado por el gancho obtendra una reduccion de resistencia al daño.", img: "/img/habilidades/watanabe/hab3.png" },
+      { id: 4, nombre: "Habilidad: El Otro Gancho", desc: "Watanabe realiza un Gancho al menton que levanta al enemigo. esta habilidad puede golpear a multiples objetivos", img: "/img/habilidades/watanabe/hab4.png" },
+      { id: 5, nombre: "Habilidad Definitiva: Servidos En Bandeja", desc: "Watanabe tira su nunchakus que aumentan de tamaño y giran rapidamente atrayendo a cualquier enemigo hacia el centro de la habilidad. y todo daño hecho se traspasa a todo enemigo afectado por la habilidad", img: "/img/habilidades/watanabe/hab5.png" }
     ]
   }
 ];const IMAGENES_GALERIA = [
-  { id: 1, src: "/galeria/img1.jpg", alt: "Paisaje de Liyue" },
-  { id: 2, src: "/galeria/img2.jpg", alt: "Combate Arlecchino" },
-  { id: 3, src: "/galeria/img3.jpg", alt: "Colombina Arte" },
-  { id: 4, src: "/galeria/img4.jpg", alt: "Ciudad de Mondstadt" },
+  { id: 1, src: "/img/game_picture/scene 1.png", alt: "Dia Escolar" },
+  { id: 2, src: "/img/game_picture/scene 3.png", alt: ":O" },
+  { id: 3, src: "/img/game_picture/scene 4.png", alt: "Errores y Gliches" },
+  { id: 4, src: "/img/game_picture/background.png", alt: "El Juego esta en tu Contra" },
   { id: 5, src: "/img/characters/takara/showcase.png", alt: "Diseño de Takara" },
-  { id: 6, src: "/galeria/img6.jpg", alt: "Alquimia de Albedo" },
-  { id: 7, src: "/galeria/img7.jpg", alt: "Catedral de Favonius" },
-  { id: 8, src: "/galeria/img8.jpg", alt: "Puerto de Liyue" },
+  { id: 6, src: "/img/characters/shinoda/showcase shino.png", alt: "Diseño de Shinoda" },
+  { id: 7, src: "/img/characters/touko/showcase touko.png", alt: "Diseño de Touko" },
+  { id: 8, src: "/img/characters/watanabe/showcase watanabe.png", alt: "Diseño de Watanabe" },
 ];
 const CAPITULOS_HISTORIA = [
   {
     id: 1,
-    titulo: "El Origen del Caos",
-    texto: "En la escuela hay muchos grupos de compañeros y amigos. pero uno que resaltaba bastante siempre era el grupo conformado por takara, shinoda, touko y watanabe. ya que algunos eran populares otros inteligentes entre otras cosas.",
-    imagen: "/img/historia/origen.jpg", // Reemplaza con tus rutas reales
+    titulo: "1",
+    texto: "Aunque en la escuela existían muchos círculos sociales, el grupo de Takara, Shinoda, Touko y Watanabe siempre lograba destacar. Su distinción radicaba en el equilibrio de sus integrantes.",
+    imagen: "/img/game_picture/scene 1.png", // Reemplaza con tus rutas reales
     alin: "derecha" // La imagen irá a la derecha
   },
   {
     id: 2,
-    titulo: "La Rebelión de la IA",
-    texto: "un dia un extraño compañero les pidio ayuda con un trabajo ya que necesitaba compañeros que trabajen en equipo. el grupo acepto por curiosidad. pero en realidad el trabajo de su compañero era algo que los cambiaria para siempre.",
-    imagen: "/img/historia/rebelion.jpg",
+    titulo: "2",
+    texto: "Un día, un misterioso compañero les pidió ayuda con un proyecto, alegando que buscaba a personas que supieran trabajar en equipo. Movidos por la curiosidad, aceptaron la propuesta Sin embargo, lo que comenzó como un simple favor escolar terminó convirtiéndose en una experiencia que los marcaría para siempre.",
+    imagen: "/img/game_picture/scene 2.png",
     alin: "izquierda" // La imagen irá a la izquierda
   },
   {
     id: 3,
-    titulo: "Los Primeros Caídos",
-    texto: "era algo increible. una realidad virtual super aumentada. el grupo estaba disfrutando esto. pero no todo era perfecto o divertido.",
-    imagen: "/img/historia/caidos.jpg",
+    titulo: "3",
+    texto: "Era una experiencia increíble una realidad virtual profundamente aumentada. Al principio, el grupo se sumergió en la experiencia con asombro, disfrutando de cada detalle; sin embargo, pronto descubrieron que no todo en la simulacion era perfecto y divertido.",
+    imagen: "/img/game_picture/scene 3.png",
     alin: "derecha"
   },
   {
     id: 4,
-    titulo: "La Resistencia Watanabe",
-    texto: "el sistema empezo a fallar y a corromperse, y el grupo quedo atrapado dentro de la simulacion, el sistema empezo a ser muy inestable, pero solo les quedaba una opcion",
-    imagen: "/img/historia/resistencia.jpg",
+    titulo: "4",
+    texto: "De pronto, el sistema comenzó a corromperse. Los errores se multiplicaron y el grupo quedó atrapado sin salida dentro de la simulación. Con el entorno volviéndose cada vez más inestable, Ante el caos inminente, solo restaba un único y arriesgado camino por seguir.",
+    imagen: "/img/game_picture/scene 4.png",
     alin: "izquierda"
   },
   {
     id: 5,
-    titulo: "El Vórtice Shinoda",
-    texto: "tenian que vencer el juego y completar la simulacion. ahora el grupo se enfreta a los enemigos del juego, y tambien a 'Bugs' 'Errores en la Simulacion' y a todo lo que la simulacion les arroje",
+    titulo: "5",
+    texto: "Su única salida era vencer el juego y completar la simulación hasta el final. Sin embargo, el desafío era doble: mientras combatían a los villanos de la historia, el entorno se volvía su peor enemigo. Entre bugs que distorsionaban el mundo y errores críticos de la simulación, debían resistir todo lo que ese universo digital lanzara contra ellos.",
     imagen: "/img/game_picture/background.png",
     alin: "derecha"
   }
@@ -107,7 +111,7 @@ const CAPITULOS_HISTORIA = [
   const [seccion, setSeccion] = useState(0);
   const scrollBloqueado = useRef(false);
 
-  const TOTAL_SECCIONES = 2 + PERSONAJES.length; 
+  const TOTAL_SECCIONES = 3 + PERSONAJES.length; 
 
   useEffect(() => {
     const manejarScroll = (e) => {
@@ -134,6 +138,7 @@ const CAPITULOS_HISTORIA = [
   const esHistoria = seccion === 1;
   const esPersonajes = seccion >= 2 && seccion <= 5;
   const esGaleria = seccion === 6;
+  const esLegal = seccion === 7;
 
   const pjActual = esPersonajes ? PERSONAJES[seccion - 2] : null;
 
@@ -216,7 +221,7 @@ const CAPITULOS_HISTORIA = [
           {/* Usamos 'order' de CSS para intercalar el orden en desktop si es alineación izquierda */}
           <div className={`col-span-12 md:col-span-6 ${cap.alin === "izquierda" ? "md:order-2" : "md:order-1"} flex flex-col gap-4`}>
             <div className="flex items-center gap-4">
-              <span className="text-4xl font-black text-white/10 font-serif italic">0{cap.id}</span>
+              
               {/*<h3 className="text-3xl font-bold text-amber-200 uppercase tracking-tight">{cap.titulo}</h3>*/}
             </div>
             <p className="text-zinc-300 text-lg leading-relaxed italic border-l-4 border-white/10 pl-6 py-2 group-hover:border-blue-400/50 transition-colors">
@@ -270,10 +275,12 @@ const CAPITULOS_HISTORIA = [
               <div className="habilidades-scroll flex flex-col gap-4 max-h-[55vh] overflow-y-auto pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
                 {pjActual.habilidades.map((hab) => (
                   // Aumentamos el padding (p-4) y el gap (gap-6)
-                  <div key={hab.id} className="flex items-center gap-6 bg-white/5 p-7 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/30 transition-all group cursor-default">
+                  <div key={hab.id} 
+                  className={`flex items-center gap-6 bg-white/5 p-7 rounded-xl border /10 hover:bg-white/10 transition-all group cursor-default ${pjActual.colorTexto}`}
+                  >
                     
                     {/* IMAGEN DE LA HABILIDAD: De w-12/h-12 a w-20/h-20 (o w-24/h-24 en desktop) */}
-                    <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0 bg-black/40 rounded-full overflow-hidden border-2 border-white/20 group-hover:scale-105 group-hover:border-blue-400/50 transition-all duration-300 shadow-lg">
+                    <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0 bg-black/40 rounded-full overflow-hidden border-2 border-white/20 transition-all duration-300 shadow-lg group-hover:scale-105 group-hover:border-current">
                       {/* Aquí reemplazas con tu imagen real de la habilidad */}
                       { <Image src={hab.img} alt={hab.nombre} fill priority className="object-cover" />}
                       <div className="w-full h-full flex items-center justify-center text-xs text-white/50">Img</div>
@@ -282,7 +289,11 @@ const CAPITULOS_HISTORIA = [
                     {/* TEXTO DE LA HABILIDAD: Fuentes más grandes y legibles */}
                     <div className="flex flex-col gap-1">
                       {/* Título más grande (text-base a text-lg) */}
-                      <h4 className="text-base md:text-lg font-black text-blue-200 tracking-wide">{hab.nombre}</h4>
+                      {/*<h4 className="text-base md:text-lg font-black text-blue-200 tracking-wide">{hab.nombre}</h4>
+                      {/*<h4 className={`text-base md:text-lg font-black tracking-wide bg-gradient-to-l ${pjActual.color} to-white/70 bg-clip-text text-transparent`}>{hab.nombre}</h4>*/}
+                      <h4 className={`text-base md:text-lg font-black tracking-wide uppercase ${pjActual.colorTexto}`}>
+                        {hab.nombre}
+                      </h4>
                       {/* Descripción más grande (text-xs a text-sm) y color un poco más claro */}
                       <p className="text-sm md:text-[13px] text-zinc-300 leading-relaxed pr-2">{hab.desc}</p>
                     </div>
@@ -322,6 +333,59 @@ const CAPITULOS_HISTORIA = [
             </div>
           </div>
         )}
+        {/* 7. SECCIÓN LEGAL Y COPYRIGHT */}
+{esLegal && (
+  <div className="w-full max-w-5xl px-10 animate-in fade-in slide-in-from-bottom-10 duration-700">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-16">
+      
+      {/* Columna 1: Copyright */}
+      <div className="flex flex-col gap-4">
+        <div className="relative h-10 w-24 opacity-50">
+          <Image src="/img/game_picture/logo2.png" alt="Logo" fill className="object-contain grayscale" />
+        </div>
+        <p className="text-zinc-500 text-sm leading-relaxed">
+          © 2026 BetaTester Project. <br />
+          Todos los derechos reservados. <br />
+          Desarrollado con pasión por el equipo de BetaTesters.
+        </p>
+      </div>
+
+      {/* Columna 2: Enlaces Legales */}
+      <div className="flex flex-col gap-4">
+        <h4 className="text-blue-300 font-bold uppercase tracking-widest text-xs">Información Legal</h4>
+        <nav className="flex flex-col gap-2">
+          <a href="#" className="text-zinc-400 hover:text-white text-sm transition-colors">Política de Privacidad</a>
+          <a href="#" className="text-zinc-400 hover:text-white text-sm transition-colors">Términos de Servicio</a>
+          <a href="#" className="text-zinc-400 hover:text-white text-sm transition-colors">Acuerdo de Licencia (EULA)</a>
+          <a href="#" className="text-zinc-400 hover:text-white text-sm transition-colors">Uso de Cookies</a>
+        </nav>
+      </div>
+
+      {/* Columna 3: Licencias de Terceros */}
+      <div className="flex flex-col gap-4">
+        <h4 className="text-blue-300 font-bold uppercase tracking-widest text-xs">Créditos y Licencias</h4>
+        <p className="text-zinc-500 text-xs leading-relaxed">
+          Los recursos visuales y marcas mencionadas son propiedad de sus respectivos autores. 
+          Este proyecto utiliza tecnologías de código abierto bajo licencias MIT y Apache 2.0.
+        </p>
+        <div className="flex gap-4 mt-2">
+          {/* Aquí podrías poner iconos de redes sociales o GitHub */}
+          <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer">
+            <span className="text-[10px]">GH</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Nota al pie final */}
+    <div className="mt-20 text-center">
+      <p className="text-[10px] text-zinc-600 uppercase tracking-[0.4em]">
+        Beta Phase Version 0.0.4 - Distributed by Julian Ochoaispuru
+      </p>
+    </div>
+  </div>
+)}
       </div>
 
       {/* MODAL CORREGIDO - SOLO UNO */}
@@ -366,6 +430,7 @@ const CAPITULOS_HISTORIA = [
         </div>
         <span className="text-[10px] uppercase tracking-widest">Scroll para navegar</span>
       </div>
+      
     </main>
   );
 } 

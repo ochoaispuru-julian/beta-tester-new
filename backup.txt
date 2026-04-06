@@ -17,7 +17,7 @@
   { 
     id: 2, 
     nombre: "Shinoda", 
-    desc: "Shinoda es alguien conocida por todo el curso. aunque mas por el nombre familiar, ella es alguien amigable y encantadora que parece no tener ningun defecto pero sus amigos saben todos los defectos de la impecable shinoda", 
+    desc: "Shinoda es alguien conocida por todo el curso. aunque es mas conocida por su familia, ella es alguien amigable y encantadora que parece no tener ningun defecto pero sus mejores amigos saben todos los defectos de la impecable shinoda y diran cosas como, que es torpe , que alguna veces es una otaku, que en algunos momentos piensa solo en ella y muchas mas", 
     color: "from-yellow-600/40",
     imagen: "/img/shinoda.png",
     habilidades: [
@@ -45,7 +45,7 @@
   { 
     id: 4, 
     nombre: "Watanabe", 
-    desc: "El Alquimista Jefe de los Caballeros...", 
+    desc: "Watanabe es.. bueno.. es Watanabe. es un chico que es bastante social y esta en varios grupos, es alguien divertido y algo carismatico. siempre hace cualquier tipo de bromas para mejorar el ambiente pero tambien es alguien un poco estupido.", 
     color: "from-teal-500/40",
     imagen: "/img/watanabe.png",
     habilidades: [
@@ -65,6 +65,43 @@
   { id: 6, src: "/galeria/img6.jpg", alt: "Alquimia de Albedo" },
   { id: 7, src: "/galeria/img7.jpg", alt: "Catedral de Favonius" },
   { id: 8, src: "/galeria/img8.jpg", alt: "Puerto de Liyue" },
+];
+const CAPITULOS_HISTORIA = [
+  {
+    id: 1,
+    titulo: "El Origen del Caos",
+    texto: "En la escuela hay muchos grupos de compañeros y amigos. pero uno que resaltaba bastante siempre era el grupo conformado por takara, shinoda, touko y watanabe. ya que algunos eran populares otros inteligentes entre otras cosas.",
+    imagen: "/img/historia/origen.jpg", // Reemplaza con tus rutas reales
+    alin: "derecha" // La imagen irá a la derecha
+  },
+  {
+    id: 2,
+    titulo: "La Rebelión de la IA",
+    texto: "un dia un extraño compañero les pidio ayuda con un trabajo ya que necesitaba compañeros que trabajen en equipo. el grupo acepto por curiosidad. pero en realidad el trabajo de su compañero era algo que los cambiaria para siempre.",
+    imagen: "/img/historia/rebelion.jpg",
+    alin: "izquierda" // La imagen irá a la izquierda
+  },
+  {
+    id: 3,
+    titulo: "Los Primeros Caídos",
+    texto: "era algo increible. una realidad virtual super aumentada. el grupo estaba disfrutando esto. pero no todo era perfecto o divertido.",
+    imagen: "/img/historia/caidos.jpg",
+    alin: "derecha"
+  },
+  {
+    id: 4,
+    titulo: "La Resistencia Watanabe",
+    texto: "el sistema empezo a fallar y a corromperse, y el grupo quedo atrapado dentro de la simulacion, el sistema empezo a ser muy inestable, pero solo les quedaba una opcion",
+    imagen: "/img/historia/resistencia.jpg",
+    alin: "izquierda"
+  },
+  {
+    id: 5,
+    titulo: "El Vórtice Shinoda",
+    texto: "tenian que vencer el juego y completar la simulacion. ahora el grupo se enfreta a los enemigos del juego, y tambien a 'Bugs' 'Errores en la Simulacion' y a todo lo que la simulacion les arroje",
+    imagen: "/img/game_picture/background.png",
+    alin: "derecha"
+  }
 ];export default function Home() {
   const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
   const [seccion, setSeccion] = useState(0);
@@ -106,7 +143,7 @@
       {/* FONDO DINÁMICO */}
       <div className="absolute inset-0 -z-10">
         <div className={`absolute inset-0 transition-opacity duration-1000 ${esInicio ? 'opacity-100' : 'opacity-0'}`}>
-          <Image src="/img/game_picture/background.png" alt="BG" className="object-cover md:object-center brightness-30" priority fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+          <Image src="/img/game_picture/background.png" alt="BG" className="object-cover blur-[1px] md:object-center brightness-30" priority fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         </div>
         <div className={`absolute inset-0 bg-gradient-to-b ${pjActual?.color || 'from-transparent'} to-[#0e0e0f] transition-all duration-700 ${esPersonajes ? 'opacity-100' : 'opacity-0'}`} />
         <div className={`absolute inset-0 bg-[#0e0e0f] transition-opacity duration-1000 ${esHistoria || esGaleria ? 'opacity-100' : 'opacity-0'}`} />
@@ -133,25 +170,89 @@
             {/*<h1 className="text-7xl md:text-9xl font-serif italic uppercase tracking-tighter mb-6">BetaTester</h1>*/}
             <Image src="/img/game_picture/logo2.png" alt="logo" className="object-cover" width={1000} height={900}/>
             <p className="text-blue-200 tracking-[0.5em] uppercase text-sm mb-10">El Juego esta en tu contra. Literalmente</p>
-            <button className="bg-blue-400 text-black px-10 py-4 shadow-lg shadow-blue-400 rounded-full font-bold hover:scale-105 transition-transform">DESCARGAR</button>
+            
+                        <a 
+              href="https://github.com/ochoaispuru-julian/beta-tester-new/tree/master" // Tu URL de destino
+              target="_blank"               // Abre en pestaña nueva
+              rel="noopener noreferrer"    // Seguridad: evita que la nueva página acceda a tu sitio
+              className="inline-block"      // Permite que el enlace se comporte como un contenedor de botón
+            >
+              <button className="bg-blue-400 text-black px-10 py-4 shadow-lg shadow-blue-400/50 rounded-full font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                <span>DESCARGAR</span>
+                {/* Icono opcional de flecha externa */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </button>
+            </a>
           </div>
         )}
 
-        {esHistoria && (
-          <div className="max-w-4xl px-10 grid md:grid-cols-2 gap-10 items-center animate-in fade-in slide-in-from-right-10 duration-700">
-            <div>
-              <h2 className="text-4xl font-black italic mb-10 text-center text-blue-300 uppercase tracking-widest">Historia</h2>
-              <p className="text-zinc-300 leading-relaxed italic">"En los albores de los tiempos, los Siete Arcontes gobernaron las naciones..."</p>
-              <p className="text-zinc-300 leading-relaxed italic">"En los albores de los tiempos, los Siete Arcontes gobernaron las naciones..."</p>
-              <p className="text-zinc-300 leading-relaxed italic">"En los albores de los tiempos, los Siete Arcontes gobernaron las naciones..."</p>
-              <p className="text-zinc-300 leading-relaxed italic">"En los albores de los tiempos, los Siete Arcontes gobernaron las naciones..."</p>
-              <div className="mt-6 h-1 w-20 bg-amber-500" />
+{/* 1. HISTORIA REDISEÑADA COMO TIMELINE LARGA */}
+{esHistoria && (
+  <div className="w-full max-w-7xl px-10 md:px-20 animate-in fade-in slide-in-from-right-10 duration-1000">
+    
+    {/* Título Fijo de la Sección */}
+    <div className="text-center mb-16">
+      <h2 className="text-2xl md:text-2xl font-black italic mt-2 text-blue-300 uppercase tracking-widest [0_0_15px_rgba(59,130,246,0.5)]">
+        Historia
+      </h2>
+    </div>
+
+    {/* CONTENEDOR CON SCROLL INTERNO */}
+    {/* Aquí está la magia: limitamos la altura y permitimos el scroll 
+    <div className="h-[80vh] overflow-y-auto pr-6 space-y-24 pb-20 custom-scroll-historia">*/}
+    <div className="h-[80vh] overflow-y-auto pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full custom-scroll-historia">
+      
+      {CAPITULOS_HISTORIA.map((cap, idx) => (
+        <div 
+          key={cap.id} 
+          className={`grid grid-cols-1 md:grid-cols-12 gap-10 items-center animate-in fade-in slide-in-from-bottom-10`}
+          style={{ animationDelay: `${idx * 200}ms` }} // Efecto cascada sutil
+        >
+          
+          {/* BLOQUE DE TEXTO */}
+          {/* Usamos 'order' de CSS para intercalar el orden en desktop si es alineación izquierda */}
+          <div className={`col-span-12 md:col-span-6 ${cap.alin === "izquierda" ? "md:order-2" : "md:order-1"} flex flex-col gap-4`}>
+            <div className="flex items-center gap-4">
+              <span className="text-4xl font-black text-white/10 font-serif italic">0{cap.id}</span>
+              {/*<h3 className="text-3xl font-bold text-amber-200 uppercase tracking-tight">{cap.titulo}</h3>*/}
             </div>
-            <div className="relative h-64 bg-white/5 rounded-xl overflow-hidden border border-white/10"> 
+            <p className="text-zinc-300 text-lg leading-relaxed italic border-l-4 border-white/10 pl-6 py-2 group-hover:border-blue-400/50 transition-colors">
+              "{cap.texto}"
+            </p>
+            <div className={`h-1 w-20 bg-blue-500/50 rounded-full mt-2 ${cap.alin === "derecha" ? "self-start" : "self-end"}`} />
+          </div>
+
+          {/* BLOQUE DE IMAGEN */}
+          <div className={`col-span-12 md:col-span-6 ${cap.alin === "izquierda" ? "md:order-1" : "md:order-2"}`}>
+            <div className="relative aspect-[16/10] bg-white/5 rounded-2xl overflow-hidden border border-white/10 group hover:border-blue-400 transition-all duration-500 shadow-2xl hover:shadow-blue-500/20">
+              {/* Overlay sutil de brillo al hover */}
+              <div className="absolute inset-0 bg-blue-400/5 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+              
+              <Image 
+                src={cap.imagen} 
+                alt={cap.titulo} 
+                fill 
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              
+              {/* Decoración de esquina tipo interfaz de juego 
+              <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-white/20 rounded-tr-2xl pointer-events-none group-hover:border-blue-400 transition-colors" />
+              <div className="absolute bottom-4 left-4 z-20 bg-black/70 px-4 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
+                <span className="text-[10px] text-zinc-400 uppercase tracking-widest font-bold">Registro Visual // A0{cap.id}</span>
+              </div>*/}
             </div>
           </div>
-        )}
 
+        </div>
+      ))}
+
+    </div>
+  </div>
+)}
         {/* 2-5. PERSONAJES */}
         {esPersonajes && pjActual && (
           <div key={seccion} className="grid grid-cols-12 w-full px-10 md:px-32 items-center animate-in fade-in slide-in-from-bottom-10 duration-700">
@@ -159,9 +260,9 @@
             <div className="col-span-12 md:col-span-6 flex flex-col justify-center h-[80vh]">
               {/* Títulos más compactos arriba para dar espacio */}
               <div className="mb-4">
-                <span className="text-white-500 font-bold tracking-[0.3em] uppercase text-xs">Personajes</span>
-                <h2 className="text-6xl md:text-7xl font-onest italic leading-none mt-2">{pjActual.nombre}</h2>
-                <p className="text-zinc-300 italic text-base md:text-lg max-w-md mt-2">"{pjActual.desc}"</p>
+                {/*<span className="text-white-500 font-bold tracking-[0.3em] uppercase text-xs">Personajes</span>*/}
+                <h2 className="text-6xl md:text-7xl font-black italic leading-none text-shadow-lg mt-2">{pjActual.nombre}</h2>
+                <p className="text-zinc-300 italic text-base md:text-lg max-w-md mt-2 ">"{pjActual.desc}"</p>
               </div>
               
               {/* LISTA DE HABILIDADES AMPLIADA */}
@@ -172,7 +273,7 @@
                   <div key={hab.id} className="flex items-center gap-6 bg-white/5 p-7 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/30 transition-all group cursor-default">
                     
                     {/* IMAGEN DE LA HABILIDAD: De w-12/h-12 a w-20/h-20 (o w-24/h-24 en desktop) */}
-                    <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0 bg-black/40 rounded-full overflow-hidden border-2 border-white/20 group-hover:scale-105 group-hover:border-amber-400/50 transition-all duration-300 shadow-lg">
+                    <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0 bg-black/40 rounded-full overflow-hidden border-2 border-white/20 group-hover:scale-105 group-hover:border-blue-400/50 transition-all duration-300 shadow-lg">
                       {/* Aquí reemplazas con tu imagen real de la habilidad */}
                       { <Image src={hab.img} alt={hab.nombre} fill priority className="object-cover" />}
                       <div className="w-full h-full flex items-center justify-center text-xs text-white/50">Img</div>
@@ -181,7 +282,7 @@
                     {/* TEXTO DE LA HABILIDAD: Fuentes más grandes y legibles */}
                     <div className="flex flex-col gap-1">
                       {/* Título más grande (text-base a text-lg) */}
-                      <h4 className="text-base md:text-lg font-bold text-amber-200 tracking-wide">{hab.nombre}</h4>
+                      <h4 className="text-base md:text-lg font-black text-blue-200 tracking-wide">{hab.nombre}</h4>
                       {/* Descripción más grande (text-xs a text-sm) y color un poco más claro */}
                       <p className="text-sm md:text-[13px] text-zinc-300 leading-relaxed pr-2">{hab.desc}</p>
                     </div>
@@ -243,7 +344,7 @@
 
           <div className="mt-8 text-center animate-in slide-in-from-bottom-5">
             <h3 className="text-2xl font-bold italic text-blue-200">{imagenSeleccionada.alt}</h3>
-            <p className="text-zinc-500 text-sm mt-2 uppercase tracking-widest">Click fuera para cerrar</p>
+            <p className="text-zinc-500 text-sm mt-2 uppercase tracking-widest">Click para cerrar</p>
           </div>
         </div>
       )}
@@ -259,11 +360,11 @@
         ))}
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
+      <div className="absolute bottom-10 left-325 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
         <div className="w-5 h-8 border-2 border-white rounded-full flex justify-center p-1">
           <div className="w-1 h-2 bg-white rounded-full animate-bounce" />
         </div>
-        <span className="text-[8px] uppercase tracking-widest">Scroll para navegar</span>
+        <span className="text-[10px] uppercase tracking-widest">Scroll para navegar</span>
       </div>
     </main>
   );
